@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+interface MarkerStyle {
+    + display()
+}
+
+class RestaurantMarkerStyle implements MarkerStyle {
+    + display()
+}
+
+class HospitalMarkerStyle implements MarkerStyle {
+    + display()
+}
+
+class GasStationMarkerStyle implements MarkerStyle {
+    + display()
+}
+
+class MarkerStyleFactory {
+    - styleMap: Map<String, MarkerStyle>
+    + getMarkerStyle(styleType: String): MarkerStyle
+    + getUniqueStylesCount(): int
+}
+
+MarkerStyle <|-- RestaurantMarkerStyle
+MarkerStyle <|-- HospitalMarkerStyle
+MarkerStyle <|-- GasStationMarkerStyle
+MarkerStyleFactory --> MarkerStyle
+@enduml

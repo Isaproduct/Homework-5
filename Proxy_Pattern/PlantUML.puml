@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+interface Image {
+    + display()
+}
+
+class RealImage implements Image {
+    - imagePath: String
+    + display()
+    - loadHighResolutionImage()
+}
+
+class ProxyImage implements Image {
+    - realImage: RealImage
+    - imagePath: String
+    - thumbnailPath: String
+    - isImageLoaded: boolean
+    + display()
+    - showThumbnail()
+}
+
+class ProtectionProxy implements Image {
+    - proxyImage: ProxyImage
+    - imagePath: String
+    - thumbnailPath: String
+    - isLoggedIn: boolean
+    + display()
+    + uploadImage()
+    + replaceImage()
+}
+
+Image <|-- RealImage
+Image <|-- ProxyImage
+Image <|-- ProtectionProxy
+ProxyImage --> RealImage
+@enduml
