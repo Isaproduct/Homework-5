@@ -1,4 +1,5 @@
-public class Main {
+package Proxy_Pattern;
+public class main {
     public static void main(String[] args) {
         ProtectionProxy loggedInAgent = new ProtectionProxy("high_res_image1.jpg", "thumb1.jpg", true);
         loggedInAgent.display();

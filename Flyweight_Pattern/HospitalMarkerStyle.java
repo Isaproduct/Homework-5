@@ -1,3 +1,4 @@
+package Flyweight_Pattern;
 public class HospitalMarkerStyle implements MarkerStyle {
     @Override
     public void display() {

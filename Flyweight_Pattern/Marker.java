@@ -1,3 +1,4 @@
+package Flyweight_Pattern;
 public class Marker {
     private MarkerStyle style;
     private String location;

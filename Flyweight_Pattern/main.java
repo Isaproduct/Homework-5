@@ -1,3 +1,5 @@
+package Flyweight_Pattern;
+
 public class main {
     public static void main(String[] args) {
         Marker marker1 = new Marker("Location 1", "restaurant");

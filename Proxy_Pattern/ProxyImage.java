@@ -1,3 +1,5 @@
+package Proxy_Pattern;
+
 public class ProxyImage implements Image {
     private RealImage realImage;
     private String imagePath;

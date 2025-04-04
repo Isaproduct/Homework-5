@@ -1,3 +1,5 @@
+package Proxy_Pattern;
+
 public class ProtectionProxy implements Image {
     private ProxyImage proxyImage;
     private String imagePath;

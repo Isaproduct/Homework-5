@@ -1,3 +1,4 @@
+package Flyweight_Pattern;
 public class GasStationMarkerStyle implements MarkerStyle {
     @Override
     public void display() {

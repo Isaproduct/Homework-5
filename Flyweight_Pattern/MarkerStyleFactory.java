@@ -1,4 +1,7 @@
+package Flyweight_Pattern;
 import java.util.ArrayList; // Неправильный импорт
+
+
 import java.util.List; // Неправильный импорт
 
 public class MarkerStyleFactory {
