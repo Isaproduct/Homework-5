@@ -1,24 +1,29 @@
 package Proxy_Pattern;
 
+
+
 public class ProxyImage implements Image {
     private RealImage realImage;
     private String imagePath;
     private String thumbnailPath;
     private boolean isImageLoaded;
+
     public ProxyImage(String imagePath, String thumbnailPath) {
         this.imagePath = imagePath;
         this.thumbnailPath = thumbnailPath;
         this.isImageLoaded = false;
+        this.realImage = new RealImage(imagePath);  // Инициализация realImage здесь
     }
+
     @Override
     public void display() {
         if (!isImageLoaded) {
             showThumbnail();
-            realImage = new RealImage(imagePath);
             isImageLoaded = true;
         }
-        realImage.display();
+        realImage.display();  // Отображаем изображение, если оно загружено
     }
+
     private void showThumbnail() {
         System.out.println("Displaying thumbnail: " + thumbnailPath);
     }
